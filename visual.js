@@ -25,7 +25,7 @@ radar_visualization({
       grid: "#bbb",
       inactive: "#ddd"
     },
-    title: "WestWing Tech Radar — 2022.03",
+    title: "Tech Radar — 2022.03",
     quadrants: [
       { name: "Tools" },
       { name: "Languages & Frameworks" },
