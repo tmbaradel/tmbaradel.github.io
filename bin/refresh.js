@@ -4,7 +4,7 @@ var content = 'const points = [';
 
 const readerOptions = {
     sheetId: "1JXrJ0FyimyhG7OJvW3qOVwvosAqfM-powfDNElZ9RqY",
-    apiKey: 'AIzaSyBV2UuvISeE1_pH84CtBabFyz40rGofV5M',
+    apiKey: process.env.GOOGLE_KEY,
     returnAllResults: true,
     filter: {
       "key to filter on": "value to match",
