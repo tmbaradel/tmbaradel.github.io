@@ -16,7 +16,7 @@ jobs:
           ls ${{ github.workspace }}
       - name: do the magic    
         env: # Set the secret as an input
-          super_secret: ${{ secrets.googleKey }}
+          super_secret: ${{ secrets.GOOGLE_KEY }}
         run: | 
           echo "$GOOGLE_KEY" && cd bin && npm install && node refresh.js
       - name: Add & Commit
