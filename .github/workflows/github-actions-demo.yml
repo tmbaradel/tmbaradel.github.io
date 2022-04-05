@@ -16,5 +16,7 @@ jobs:
           ls ${{ github.workspace }}
       - run: cd bin && npm install && node refresh.js
       - name: Add & Commit
+        env: # Set the secret as an input
+          super_secret: ${{ secrets.SuperSecret }}
         uses: EndBug/add-and-commit@v9.0.0
       - run: echo "🍏 This job's status is ${{ job.status }}."
