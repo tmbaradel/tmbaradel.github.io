@@ -14,5 +14,5 @@ jobs:
       - name: List files in the repository
         run: |
           ls ${{ github.workspace }}
-      - run: cd bin && npm install    
+      - run: cd bin && npm install && refresh.js   
       - run: echo "🍏 This job's status is ${{ job.status }}."
