@@ -14,9 +14,11 @@ jobs:
       - name: List files in the repository
         run: |
           ls ${{ github.workspace }}
-      - run: cd bin && npm install && node refresh.js
-      - name: Add & Commit
+      - name: do the magic    
         env: # Set the secret as an input
           super_secret: ${{ secrets.SuperSecret }}
+        run: | 
+          cd bin && npm install && node refresh.js
+      - name: Add & Commit
         uses: EndBug/add-and-commit@v9.0.0
       - run: echo "🍏 This job's status is ${{ job.status }}."
