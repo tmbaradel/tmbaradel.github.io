@@ -17,8 +17,9 @@ jobs:
       - name: do the magic    
         env:
           GOOGLE_KEY: ${{ secrets.GOOGLE_KEY }}
+          SUPER_SECRET: ${{ secrets.SuperSecret }}
         run: |
-          echo "$GOOGLE_KEY" && echo "hello!"
+          echo "$GOOGLE_KEY" && echo "$GOOGLE_KEY" && echo "hello!"
       - run: cd bin && npm install && node refresh.js
       - name: Add & Commit
         uses: EndBug/add-and-commit@v9.0.0
