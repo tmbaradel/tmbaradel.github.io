@@ -11,6 +11,7 @@ const readerOptions = {
     },
 };
 
+console.log(process.env.GOOGLE_KEY);
 
 reader(readerOptions, (results, error) => {
     if (error) {

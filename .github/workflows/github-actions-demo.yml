@@ -17,8 +17,6 @@ jobs:
       - name: do the magic    
         env:
           GOOGLE_KEY: ${{ secrets.GOOGLE_KEY }}
-          SUPER_SECRET: ${{ secrets.SuperSecret }}
-          PORCAMA: "ciao-porca"
         run: |
           echo "$env:GOOGLE_KEY" && echo "$GOOGLE_KEY" && echo "$PORCAMA" && echo "hello!"
       - run: cd bin && npm install && node refresh.js
