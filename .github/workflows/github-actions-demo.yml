@@ -16,11 +16,10 @@ jobs:
           ls ${{ github.workspace }}
       - name: do the magic    
         env:
-          SUPER_SECRET: ${{ secrets.SuperSecret }}
+          GOOGLE_KEY: ${{ secrets.GOOGLE_KEY }}
         run: |
-          echo "$SUPER_SECRET" && echo "hello!"
-          run: | 
-            cd bin && npm install && node refresh.js
+          echo "$GOOGLE_KEY" && echo "hello!"
+      - run: cd bin && npm install && node refresh.js
       - name: Add & Commit
         uses: EndBug/add-and-commit@v9.0.0
       - run: echo "🍏 This job's status is ${{ job.status }}."
