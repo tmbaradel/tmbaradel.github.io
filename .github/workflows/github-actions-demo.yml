@@ -18,7 +18,7 @@ jobs:
         env:
           SUPER_SECRET: ${{ secrets.SuperSecret }}
         run: |
-          example-command "$SUPER_SECRET"
+          echo "$SUPER_SECRET" && echo "hello!"
           run: | 
             cd bin && npm install && node refresh.js
       - name: Add & Commit
