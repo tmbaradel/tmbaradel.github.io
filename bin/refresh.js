@@ -12,6 +12,7 @@ const readerOptions = {
 };
 
 process.argv.forEach(function (val, index, array) {
+    console.log("Here: " + val);    
     console.log(index + ': ' + val);
 });
 
