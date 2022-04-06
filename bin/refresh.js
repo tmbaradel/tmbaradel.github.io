@@ -11,13 +11,6 @@ const readerOptions = {
     },
 };
 
-console.log(process.argv[2]);
-
-// process.argv.forEach(function (val, index, array) {
-//     console.log("Here: " + val);    
-//     console.log(index + ': ' + val);
-// });
-
 reader(readerOptions, (results, error) => {
     if (error) {
         console.error('problem retreaving points', error);
