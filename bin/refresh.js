@@ -11,7 +11,9 @@ const readerOptions = {
     },
 };
 
-console.log(process.env.GOOGLE_KEY);
+process.argv.forEach(function (val, index, array) {
+    console.log(index + ': ' + val);
+});
 
 reader(readerOptions, (results, error) => {
     if (error) {

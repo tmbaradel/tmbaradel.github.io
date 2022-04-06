@@ -19,7 +19,7 @@ jobs:
           GOOGLE_KEY: ${{ secrets.GOOGLE_KEY }}
         run: |
           echo "$env:GOOGLE_KEY" && echo "$GOOGLE_KEY" && echo "$PORCAMA" && echo "hello!"
-      - run: cd bin && npm install && node refresh.js
+      - run: cd bin && npm install && node refresh.js one two=three four
       - name: Add & Commit
         uses: EndBug/add-and-commit@v9.0.0
       - run: echo "🍏 This job's status is ${{ job.status }}."
