@@ -15,7 +15,7 @@ jobs:
         run: |
           ls ${{ github.workspace }}
       - name: do the magic    
-        with:
+        env:
           GOOGLE_KEY: ${{ secrets.GOOGLE_KEY }}
         run: |
           cd bin && npm install && node refresh.js "$GOOGLE_KEY"
